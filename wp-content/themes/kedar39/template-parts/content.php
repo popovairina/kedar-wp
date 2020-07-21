@@ -407,32 +407,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-        jQuery('#foundation-4').click(function(e){
-            var data = {
-                'action': 'getproduct', // это идентификатор чтоб бек понимал
-                'productID': '882', // параметы которые надо передать на бек, к примеру ID продукта чтоб его грузить
-                'custom': 'customValue',
-            }
-
-            var ajaxurl = '/wp-admin/admin-ajax.php';
-
-            jQuery.ajax({
-                url: ajaxurl,
-                data: data,
-                type: 'POST',
-                beforeSend: function(){
-                    console.log('Request pending');
-                },
-                success:function(data){
-                    // Отобразить на сайте
-                    console.log(data);
-                }
-            });
-        });
-    });
-
-
-</script>
