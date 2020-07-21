@@ -1,0 +1,61 @@
+.flight-header.observing-head h1:before
+    bottom: 118px
+.price_list.observing-price
+	padding-top: 80px
+	@include media-breakpoint-down(xs)
+		padding-top: 60px
+	h2
+		text-align: center
+	.rest
+		text-decoration: none
+		margin-bottom: 20px
+	.price
+    	margin-bottom: 0px
+.observing-f-img img
+	width: 100%
+.observing-cta + .costumers
+	background: #ffffff
+.observing-cta .cta-inner
+    max-width: 700px
+.observing-price .price-cart__content
+    height: 100%
+
+.price-cart__content
+	.timeline
+		max-width: 210px
+		margin: 0 auto
+		list-style: none
+		text-align: left
+		font-size: 16px
+		position: relative
+		&-item
+			display: flex
+			margin-bottom: 30px
+			position: relative
+			align-items: center
+			&:last-child
+				margin-bottom: 10px
+			.left
+				min-width: 26px
+				height: 26px
+				background: #ffffff
+				background-image: url('../../assets/img/icons/dot.svg')
+				background-repeat: no-repeat
+				background-position: center center
+				margin-right: 26px
+			.right
+	.line-time
+		left: 13px
+		width: 2px
+		position: absolute
+		background: #0A84FF
+		top: 10px
+
+.observing-f-img
+	@include media-breakpoint-down(xs)
+		height: 200px
+		background-size: cover
+		background-position: center
+	img
+		@include media-breakpoint-down(xs)
+			display: none

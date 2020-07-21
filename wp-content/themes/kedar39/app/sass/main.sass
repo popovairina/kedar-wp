@@ -1,0 +1,88 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+button
+	outline: none !important
+
+body
+	font-family: 'Montserrat', sans-serif
+	font-size: 18px
+	font-weight: 400
+	min-width: 320px
+	color: $dark
+	margin: 0
+	line-height: 1.5
+	text-align: left
+	background-color: #fff
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+::-webkit-scrollbar
+  -webkit-appearance: none
+  width: 7px
+
+::-webkit-scrollbar-thumb
+  border-radius: 4px
+  background-color: $orange
+  box-shadow: 0 0 1px $orange
+
+.orange-form input:-webkit-autofill,
+.orange-form input:-webkit-autofill:hover,
+.orange-form input:-webkit-autofill:focus,
+.orange-form input:-webkit-autofill:active
+    -webkit-box-shadow: 0 0 0 30px $orange inset !important
+    box-shadow: 0 0 0 30px $orange inset !important
+
+.orange-form input:-webkit-autofill,
+.orange-form input:-webkit-autofill:hover,
+.orange-form input:-webkit-autofill:focus,
+.orange-form input:-webkit-autofill:active
+	-webkit-text-fill-color: #ffffff
+
+.orange-form input:focus::-webkit-input-placeholder
+	transition: opacity 0.5s 0.5s ease!important
+	opacity: 0!important
+
+
+@import partials/UX/buttons
+@import partials/UX/titles
+
+@import partials/elements/blocks
+@import partials/dry
+
+@import partials/libs/modal
+@import partials/libs/accordeon
+@import partials/libs/overlay
+
+@import "partials/libs/slick"
+@import "partials/libs/slicktheme"
+@import "partials/libs/videomodal"
+
+@import partials/pages/homepage
+@import partials/pages/tandem
+@import partials/pages/static-line
+@import partials/pages/faq
+@import partials/pages/contacts
+@import partials/pages/aff
+@import partials/pages/observe
+@import partials/pages/licenseA
+@import partials/pages/sertificate

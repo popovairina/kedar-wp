@@ -1,0 +1,81 @@
+@import vars
+
+.hide-label
+    display: none
+
+.flex_centering
+    display: flex
+    justify-content: center
+    align-items: center
+
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+.text-left
+    text-align: left
+
+.container
+    position: relative
+
+.justify-content-between
+    justify-content: space-between
+.justify-content-center
+    justify-content: center
+.justify-content-start
+    justify-content: flex-start
+.justify-content-end
+    justify-content: flex-end
+
+@include media-breakpoint-down(xl)
+    .hide_down_xl
+        display: none !important
+@include media-breakpoint-down(lg)
+    .hide_down_lg
+        display: none !important
+@include media-breakpoint-down(md)
+    .hide_down_md
+        display: none !important
+@include media-breakpoint-down(sm)
+    .hide_down_sm
+        display: none !important
+@include media-breakpoint-down(xs)
+    .hide_down_xs
+        display: none !important
+
+
+
+@include media-breakpoint-up(xl)
+    .hide_up_xl
+        display: none !important
+@include media-breakpoint-up(lg)
+    .hide_up_lg
+        display: none !important
+@include media-breakpoint-up(md)
+    .hide_up_md
+        display: none !important
+@include media-breakpoint-up(sm)
+    .hide_up_sm
+        display: none !important
+@include media-breakpoint-up(xs)
+    .hide_up_xs
+        display: none !important
+
+
+
+@include media-breakpoint-up(xl)
+    .show_up_xl
+        display: block !important
+@include media-breakpoint-up(lg)
+    .show_up_lg
+        display: block !important
+@include media-breakpoint-up(md)
+    .show_up_md
+        display: block !important
+@include media-breakpoint-up(sm)
+    .show_up_sm
+        display: block !important
+@include media-breakpoint-up(xs)
+    .show_up_xs
+        display: block !important
+

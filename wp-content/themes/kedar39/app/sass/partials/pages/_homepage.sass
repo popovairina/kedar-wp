@@ -1,0 +1,555 @@
+@import vars
+
+/*Aeroland hero*/
+.hero
+    position: relative
+    display: flex
+    width: 100%
+    height: 100vh
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    @include media-breakpoint-down(sm)
+        height: auto
+    &-video
+        overflow: hidden
+        height: 100vh
+        width: 100%
+        position: relative
+        @include media-breakpoint-down(sm)
+            height: 450px
+        @include media-breakpoint-down(xs)
+            height: 380px
+        video
+            background-size: cover
+            background-position: 50% 50%
+            position: absolute
+            margin: auto
+            width: 100%
+            height: 100%
+            right: -100%
+            bottom: -100%
+            top: -100%
+            left: -100%
+            object-fit: cover
+            z-index: -100
+        svg
+            position: absolute
+            bottom: 50px
+            left: 48%
+            animation-name: scroll
+            animation-duration: 2s
+            animation-timing-function: ease-out
+            animation-iteration-count: infinite
+            @include media-breakpoint-down(sm)
+                display: none
+
+    &-title
+        position: absolute
+        height: 70%
+        width: 100%
+        top: 0
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        padding-bottom: 40px
+        @include media-breakpoint-down(sm)
+            top: 200px
+            height: auto
+        @include media-breakpoint-down(sm)
+            top: 180px
+        .heading
+            text-align: center
+            font-style: normal
+            font-weight: bold
+            text-transform: uppercase
+            color: #FFFFFF
+            font-size: 72px
+            line-height: 1.3em
+            @include media-breakpoint-down(md)
+                font-size: 56px
+            @include media-breakpoint-down(sm)
+                font-size: 36px
+            @include media-breakpoint-down(xs)
+                font-size: 27px
+    &-btns
+        position: absolute
+        left: auto
+        top: auto
+        right: auto
+        bottom: 0%
+        display: flex
+        width: 100%
+        height: 30%
+        max-width: 800px
+        justify-content: space-between
+        @include media-breakpoint-down(md)
+            max-width: 670px
+        @include media-breakpoint-down(sm)
+            max-width: 100%
+            position: relative
+            flex-direction: column
+            margin: 0 auto
+            width: 290px
+            padding: 30px 0 50px 0
+    .btn__wrapper
+        flex: 0 auto
+        .white-btn,
+        .orange-btn
+            font-size: 22px
+            font-weight: 600
+            line-height: 1.2em
+            @include media-breakpoint-down(md)
+                font-size: 18px
+            @include media-breakpoint-down(sm)
+                max-width: 100%
+                width: 100%
+        .white-btn
+            @include media-breakpoint-down(sm)
+                color: $dark
+                border-color: $dark
+                margin-bottom: 25px
+@keyframes scroll
+    0%
+        opacity: 0 
+    30%
+        transform: translateY(0) 
+        opacity: 1 
+    100%
+        transform: translateY(25px) 
+        opacity: 0
+
+/*Aeroland Servies*/
+.home-services
+    background-color:  #F2F2F2
+    padding: 145px 0 30px 0
+    background-image: url('../../assets/img/icons/vector-left.svg'), url('../../assets/img/icons/vector-right.svg')
+    background-position: left 80%, right 50px
+    background-size: 50%
+    background-repeat: no-repeat
+    @include media-breakpoint-down(md)
+        background-image: none
+        padding: 0 0 30px 0
+    .arrow-btn
+        transition: all .25s
+        &:hover
+            opacity: .6 
+.sevice-r
+    display: flex
+    flex-wrap: wrap
+    @include media-breakpoint-down(md)
+        flex-wrap: wrap-reverse
+    &__col
+        margin-bottom: 115px
+        @include media-breakpoint-down(xs)
+            margin-bottom: 70px
+        &:first-child
+            width: 40%
+            display: flex
+            justify-content: flex-end
+            @include media-breakpoint-down(lg)
+                width: 45%
+            @include media-breakpoint-down(md)
+                width: 100%
+        &:last-child
+            width: 60%
+            padding-left: 60px
+            @include media-breakpoint-down(lg)
+                width: 55%
+            @include media-breakpoint-down(md)
+                width: 100%
+                padding-left: 0
+            img
+                max-width: 100%
+                box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.18)
+                @include media-breakpoint-down(md)
+                    width: 100%
+        .content
+            width: 420px
+            @include media-breakpoint-down(md)
+                width: 100%
+                padding: 0 20px
+                text-align: center
+            h2
+                font-weight: bold
+                font-size: 34px
+                letter-spacing: 0.05em
+                text-transform: uppercase
+                @include media-breakpoint-down(xs)
+                    font-size: 26px
+            .desc
+                font-weight: normal
+                font-size: 16px
+                margin-bottom: 10px
+                padding-right: 20%
+                letter-spacing: 0.03em
+                line-height: 1.35em
+                @include media-breakpoint-down(md)
+                    margin-bottom: 15px
+                    padding: 0 20%
+                @include media-breakpoint-down(sm)
+                    padding: 0
+                @include media-breakpoint-down(xs)
+                    font-size: 14px
+            .arrow-btn
+                @include media-breakpoint-down(md)
+                    width: 100%
+                    display: inline-block
+            .factoids
+                margin: 45px 0
+                display: flex
+                flex-wrap: wrap
+                &__col
+                    width: 50%
+                    margin-bottom: 30px
+                    line-height: 1em
+                    @include media-breakpoint-down(sm)
+                        text-align: left
+                    .main
+                        font-weight: bold
+                        font-size: 26px
+                        line-height: 32px
+                        margin-bottom: 5px
+                        @include media-breakpoint-down(xs)
+                            font-size: 18px
+                            margin-bottom: 0px
+                        span
+                            font-size: 20px
+                            @include media-breakpoint-down(xs)
+                                font-size: 16px
+                    .sub
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 1.2em
+.sevice-l
+    display: flex
+    flex-wrap: wrap
+    &__col
+        margin-bottom: 115px
+        @include media-breakpoint-down(xs)
+            margin-bottom: 70px
+        &:last-child
+            width: 40%
+            display: flex
+            justify-content: flex-start
+            @include media-breakpoint-down(lg)
+                width: 45%
+            @include media-breakpoint-down(md)
+                width: 100%
+        &:first-child
+            width: 55%
+            padding-right: 60px
+            @include media-breakpoint-down(lg)
+                width: 55%
+            @include media-breakpoint-down(md)
+                width: 100%
+                padding-right: 0
+            img
+                max-width: 100%
+                box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.18)
+                @include media-breakpoint-down(md)
+                    width: 100%
+        .content
+            width: 420px
+            @include media-breakpoint-down(md)
+                width: 100%
+                padding: 0 20px
+                text-align: center
+            h2
+                font-weight: bold
+                font-size: 34px
+                letter-spacing: 0.05em
+                text-transform: uppercase
+                @include media-breakpoint-down(xs)
+                    font-size: 26px
+            .desc
+                font-weight: normal
+                font-size: 16px
+                margin-bottom: 10px
+                padding-right: 20%
+                letter-spacing: 0.03em
+                @include media-breakpoint-down(md)
+                    margin-bottom: 15px
+                    padding: 0 20%
+                @include media-breakpoint-down(sm)
+                    padding: 0
+                @include media-breakpoint-down(xs)
+                    font-size: 14px
+            .arrow-btn
+                @include media-breakpoint-down(md)
+                    width: 100%
+                    display: inline-block
+            .factoids
+                margin: 45px 0
+                display: flex
+                flex-wrap: wrap
+                &__col
+                    width: 50%
+                    margin-bottom: 30px
+                    line-height: 1em
+                    @include media-breakpoint-down(sm)
+                        text-align: left
+                    .main
+                        font-weight: bold
+                        font-size: 26px
+                        line-height: 32px
+                        margin-bottom: 5px
+                        @include media-breakpoint-down(xs)
+                            font-size: 18px
+                            margin-bottom: 0px
+                        span
+                            font-size: 20px
+                            @include media-breakpoint-down(xs)
+                                font-size: 16px
+                    &:nth-child(1),
+                    &:nth-child(3)
+                        position: relative
+                        &::after
+                            content: url( '../../assets/img/icons/arrow__factoid.svg' )
+                            position: absolute
+                            right: 40px
+                            top: 5px
+                            @include media-breakpoint-down(md)
+                                right: 0px
+                            @include media-breakpoint-down(sm)
+                                right: 60px
+                            @include media-breakpoint-down(xs)
+                                right: 20px
+                    .sub
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 1.2em
+.sevice-r.aff
+    .desc
+        padding-right: 5%
+    .content b
+        display: inline-block
+        margin-bottom: 20px
+    .orange-btn
+        margin-top: 100px
+        @include media-breakpoint-down(xs)
+            margin-top: 40px
+.sevice-l.simple-flght
+    .orange-btn
+        margin-top: 100px
+        @include media-breakpoint-down(xs)
+            margin-top: 40px
+
+/*Aeroland is*/
+.aerolandis
+    padding-top: 120px
+    @include media-breakpoint-down(xs)
+        padding-top: 45px
+    .dark-title
+        margin-bottom: 68px
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        padding-left: 8%
+        padding-bottom: 70px
+        @include media-breakpoint-down(lg)
+            padding-left: 0
+        @include media-breakpoint-down(xs)
+            padding-bottom: 0
+    &-item
+        width: 33.33%
+        margin-bottom: 85px
+        padding-right: 8%
+        @include media-breakpoint-down(md)
+            padding-right: 4%
+        @include media-breakpoint-down(sm)
+            width: 50%
+        @include media-breakpoint-down(xs)
+            width: 100%
+            margin-bottom: 50px
+            display: flex
+        &__ico
+            margin-bottom: 10px
+            @include media-breakpoint-down(xs)
+                width: 60px
+                height: 60px
+        &__title
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+            letter-spacing: 0.03em
+            margin-bottom: 10px
+            @include media-breakpoint-down(xs)
+                font-size: 16px
+        &__desc
+            font-size: 14px
+            line-height: 17px
+        &__content
+            @include media-breakpoint-down(xs)
+                margin-left: 20px
+
+/*Home video*/
+.home-vid
+    padding: 0 0 180px 0
+    position: relative
+    overflow: hidden
+    @include media-breakpoint-down(sm)
+        padding: 0 0 100px 0
+    .orange-title
+        margin-bottom: 80px
+        @include media-breakpoint-down(xs)
+            margin-bottom: 60px
+    .vid-container
+        height: 480px
+        width: 950px
+        background-size: cover
+        background-position: center center
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.18)
+        @include media-breakpoint-down(lg)
+            width: 100%
+        @include media-breakpoint-down(sm)
+            height: 350px
+        @include media-breakpoint-down(xs)
+            height: 220px
+    .vid-play
+        background: none
+        border: none
+        width: 100%
+        height: 100%
+        svg
+            @include media-breakpoint-down(sm)
+                widt: 90px
+                height: 90px
+    .bg-partial
+        position: absolute
+        right: 0
+        top: 50px
+        z-index: -1
+        overflow: hidden
+        @include media-breakpoint-down(lg)
+            width: 40%
+        @include media-breakpoint-down(sm)
+            height: auto
+            bottom: 40px
+            top: 50%
+            transform: translateY(-60%)
+            right: -10%
+        @include media-breakpoint-down(xs)
+            width: 50%
+        svg
+            @include media-breakpoint-down(lg)
+                width: 100%
+                height: 100%
+.tandem-vid
+    padding: 120px 0 180px 0
+    @include media-breakpoint-down(sm)
+        padding: 60px 0 100px 0
+/*Home slider*/
+.costumers.home-type
+    background: #F2F2F2
+    padding: 115px 0 115px 0
+    @include media-breakpoint-down(sm)
+        padding: 80px 0 80px 0
+    @include media-breakpoint-down(xs)
+        padding: 55px 0 90px 0
+
+/*Insta Section*/
+.insta-section
+    img
+        width: 100%
+    &__btn
+        display: flex
+        align-items: center
+        margin: 50px 0
+        justify-content: center
+        transition: all .25s
+        &:hover
+            opacity: .6 
+        svg
+            margin-right: 15px
+            flex: none
+        @include media-breakpoint-down(xs)
+            width: 255px
+            margin: 30px auto 0
+    
+/*Map section*/
+.map-section
+    max-width: 1600px
+    margin: 0 auto
+    padding: 85px 0 65px 0
+    display: flex
+    flex-wrap: wrap
+    @include media-breakpoint-down(lg)
+        padding: 60px 20px 0px 20px
+    &__col:first-child
+        width: 50%
+        @include media-breakpoint-down(lg)
+            width: 100%
+    &__col:last-child
+        width: 50%
+        @include media-breakpoint-down(lg)
+            width: 100%
+        .make_road
+            text-align: center
+            margin: 30px 0
+    &__left
+        margin: 0 0 0 auto
+        max-width: 560px
+        padding-right: 65px
+        @include media-breakpoint-down(lg)
+            max-width: 705px
+            margin: 0 auto
+            padding-right: 0px
+        .make_road
+            display: flex
+            align-items: center
+            transition: all .25s
+            &:hover
+                opacity: .6
+        svg.map-svg-mark
+            margin-right: 13px
+    &__right
+        padding-top: 100px
+        height: 100%
+        @include media-breakpoint-down(lg)
+            padding-top: 40px
+            height: auto
+        img
+            margin: 0 0 0 auto
+            width: 100%
+            @include media-breakpoint-down(lg)
+                width: auto
+                margin: 0 auto
+    &__content
+        padding-top: 40px
+        @include media-breakpoint-down(sm)
+            padding-top: 30px
+        .prg
+            font-size: 16px
+            margin-bottom: 26px
+            @include media-breakpoint-down(sm)
+                font-size: 14px
+            .bold
+                font-weight: bold
+                margin-bottom: 6px
+                line-height: 1.3em
+                @include media-breakpoint-down(sm)
+                    font-size: 16px
+
+/*See you Section*/
+.see-you
+    height: 570px
+    background-size: cover
+    background-position: center center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    @include media-breakpoint-down(sm)
+        height: 400px
+    @include media-breakpoint-down(xs)
+        height: 300px
+    &__content
+        padding-top: 5%
+        @include media-breakpoint-down(xs)
+            padding-top: 20%
+        svg
+            max-width: 100%

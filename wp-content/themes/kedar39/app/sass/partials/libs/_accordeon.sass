@@ -1,0 +1,62 @@
+.accordion
+    padding: 30px 0 60px 0
+    max-width: 950px
+    margin: 0 auto
+    
+.accordion__item
+    margin: 5px auto
+    border-bottom: 1px solid #C7C7C7
+    &:hover .accordion__title-text
+        opacity: .6
+
+.accordion__item .accordion__title
+    position: relative
+    display: block
+    padding: 15px 15% 15px 0
+    margin-bottom: 2px
+    font-weight: bold
+    font-size: 18px
+    text-decoration: none
+    border-radius: 3px
+    cursor: pointer
+    i
+        font-style: normal
+        font-size: 22px
+    @include media-breakpoint-down(sm)
+        font-size: 14px
+
+.accordion__item .accordion__title .accordion__arrow
+    position: absolute
+    top: 13px
+    right: 0
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    color: $orange
+    line-height: 30px
+    font-size: 42px
+    font-weight: 700
+    border-radius: 50%
+    -webkit-transition: all 0.2s ease-out
+    transition: all 0.2s ease-out
+
+.accordion__item .accordion__rotate
+	transform: rotate(45deg)
+
+.accordion__item .accordion__content
+    margin-bottom: 30px
+    font-size: 18px
+    max-width: 90%
+    display: none
+    @include media-breakpoint-down(md)
+        max-width: 100%
+    @include media-breakpoint-down(sm)
+        font-size: 14px
+    @include media-breakpoint-down(xs)
+        text-align: justify
+
+.accordion__item .accordion__arrow-item
+	font-weight: 300
+
+.accordion__title-text
+    transition: all .25s

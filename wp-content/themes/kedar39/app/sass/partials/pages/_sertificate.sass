@@ -1,0 +1,113 @@
+.certificate-banner
+	padding: 200px 0 160px 0
+	color: #ffffff
+	background-image: url('../../assets/img/bigs/cert-bg.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center right
+	@include media-breakpoint-down(lg)
+		background-image: none
+		background: linear-gradient(180deg, #F86D48 0%, #FF926B 100%)
+	@include media-breakpoint-down(md)
+		padding: 150px 0 160px 0
+	@include media-breakpoint-down(xs)
+		padding: 120px 0 90px 0
+	h1
+        font-weight: bold
+        position: relative
+        font-size: 72px
+        text-transform: uppercase
+        color: #ffffff
+        margin-bottom: 60px
+        @include media-breakpoint-down(lg)
+        	padding-left: 60px
+        @include media-breakpoint-down(sm)
+            font-size: 48px
+            padding-left: 40px
+        @include media-breakpoint-down(xs)
+            font-size: 32px
+            padding-left: 35px
+            padding-top: 40px
+        &:before
+            display: block
+            content: ''
+            width: 30px
+            height: 30px
+            position: absolute
+            background-color: #ffffff
+            bottom: 35px
+            left: -40px
+            clip-path: polygon(0 0, 0% 100%, 80% 50%)
+            @include media-breakpoint-down(lg)
+            	left: 0
+            @include media-breakpoint-down(sm)
+            	bottom: 30px
+            	width: 15px
+            	height: 15px
+            @include media-breakpoint-down(xs)
+                bottom: 18px
+                left: 10px
+	.paragraps
+		max-width: 500px
+		@include media-breakpoint-down(lg)
+			max-width: 800px
+		p
+			font-size: 16px
+			@include media-breakpoint-down(xs)
+                font-size: 14px
+		.first-paragraph
+			margin-bottom: 45px
+			@include media-breakpoint-down(xs)
+				margin-bottom: 15px
+		.second-paragraph
+			margin-bottom: 70px
+			@include media-breakpoint-down(xs)
+				margin-bottom: 15px
+		b,strong
+			font-size: 18px
+			@include media-breakpoint-down(xs)
+                font-size: 16px
+			font-weight: 600
+		.phone strong
+			font-size: 26px
+.certificate-description
+	background: #F0F0F0
+	padding: 150px 0 120px 0
+	@include media-breakpoint-down(md)
+		padding: 50px 0 100px 0
+		text-align: center
+	@include media-breakpoint-down(md)
+		padding: 50px 0 50px 0
+
+.cert-card
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	@include media-breakpoint-down(md)
+		flex-direction: column-reverse
+	.dark-title
+		line-height: 1.3em
+		margin-bottom: 60px
+		@include media-breakpoint-down(md)
+			text-align: left
+		@include media-breakpoint-down(xs)
+			font-size: 20px
+			margin-bottom: 30px
+	.left
+		width: 50%
+		@include media-breakpoint-down(md)
+			width: 100%
+		@include media-breakpoint-down(sm)
+			margin-top: 30px
+		@include media-breakpoint-down(xs)
+            font-size: 14px
+		.desc
+			margin-bottom: 55px
+			@include media-breakpoint-down(md)
+				text-align: left
+	.right
+		width: 50%
+		@include media-breakpoint-down(md)
+			width: 100%
+		img
+			width: 100%

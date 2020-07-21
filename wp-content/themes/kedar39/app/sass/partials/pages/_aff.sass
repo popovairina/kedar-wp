@@ -1,0 +1,159 @@
+/*Tandem banner*/
+.aff-banner
+	height: 390px
+	width: 100%
+	background-size: cover
+	background-position: center center
+	@include media-breakpoint-down(sm)
+		height: 340px
+	@include media-breakpoint-down(sm)
+		height: 260px
+
+.aff-banner-2
+	height: 520px
+	width: 100%
+	background-size: cover
+	background-position: center center
+	@include media-breakpoint-down(sm)
+		height: 340px
+	@include media-breakpoint-down(sm)
+		height: 260px
+	& + .costumers
+		background: #ffffff
+
+.aff-structre
+	padding: 100px 0 0 0
+	position: relative
+	background-image: url('../../assets/img/icons/bg_svg_item.svg')
+	background-repeat: no-repeat
+	background-position: right 80%
+	background-size: 420px
+	@include media-breakpoint-down(md)
+		background-position: right 98%
+		background-size: 200px
+	@include media-breakpoint-down(xs)
+		padding-bottom: 0
+		padding-top: 60px
+	.title-1
+		margin-bottom: 50px
+	&__row
+        display: flex
+        margin: 0 -15px
+        flex-wrap: wrap
+	&__column
+		width: 33.33%
+		display: flex
+		padding: 0 40px 0 15px
+		padding-bottom: 80px
+		@include media-breakpoint-down(md)
+			width: 50%
+		@include media-breakpoint-down(sm)
+			width: 100%
+		@include media-breakpoint-down(xs)
+			padding-bottom: 40px
+	&-item
+		.title
+			font-weight: bold
+			span
+				color: $orange
+		.desc
+			font-size: 16px
+
+.aff-prepearing
+	display: flex
+	flex-wrap: wrap
+	&__col
+		width: 50%
+		@include media-breakpoint-down(sm)
+			width: 100%
+		img
+			width: 100%
+		&.image-section
+			min-height: 463px
+			background-size: cover
+	&__content
+		max-width: 470px
+		margin-left: 60px
+		margin-top: 30px
+		margin-bottom: 70px
+		padding-right: 40px
+		@include media-breakpoint-down(md)
+			font-size: 16px
+		@include media-breakpoint-down(sm)
+			margin: 60px auto
+		@include media-breakpoint-down(xs)
+			max-width: 100%
+			padding-right: 0
+			margin: 60px 15px
+		.dark-title
+			@include media-breakpoint-down(md)
+				font-size: 26px
+
+.aff-cta
+	background: #F2F2F2
+	padding: 100px 0 70px 0
+	@include media-breakpoint-down(xs)
+		padding: 50px 0 50px 0
+	&__row
+		display: flex
+		flex-wrap: wrap
+	&__column
+		width: 50%
+		@include media-breakpoint-down(md)
+			width: 100%
+		&.text-block
+			padding-left: 80px
+			padding-right: 50px
+			font-size: 16px
+			padding-top: 40px
+			letter-spacing: 0.03em
+			@include media-breakpoint-down(md)
+				   padding: 10px 0 0 0
+			b
+				line-height: 40px
+		.additional
+			@include media-breakpoint-down(md)
+				text-align: center
+				max-width: 335px
+				font-size: 14px
+				margin: 45px auto 0 auto
+		.price-box
+			padding-top: 40px
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+			.price
+				font-weight: bold
+				font-size: 34px
+				letter-spacing: 0.05em
+				margin-bottom: 0
+				@include media-breakpoint-down(xs)
+					font-size: 26px
+			.sub
+				font-weight: normal
+				font-size: 16px
+				margin-bottom: 20px
+	&__bottom
+		text-align: center
+		font-weight: 700
+		font-size: 20px
+		margin-top: 100px
+		@include media-breakpoint-down(xs)
+			font-size: 18px
+			margin-top: 60px
+		a
+			font-weight: 700
+			color: $orange
+			position: relative
+			&::after
+				content: url('../../assets/img/icons/arrow.svg')
+				display: inline-block
+				position: absolute
+				right: -15px
+				top: -2px
+				transition: all .25s
+			&:hover
+				text-decoration: none
+				&::after
+					right: -18px
